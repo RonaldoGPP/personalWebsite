@@ -29,7 +29,7 @@ const Education = () => {
 
                 <div className="md:flex md:justify-between gap-4">
                     <motion.div
-                    className={`bg-blue ${testimonialStyles} before:content-school1`}
+                    className={`bg-blue ${testimonialStyles} before:content-school1 before:scale-90`}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once:true, amount: 0.5 }}
@@ -50,7 +50,7 @@ const Education = () => {
 
 
                     <motion.div
-                    className={`bg-yellow ${testimonialStyles} before:content-school2 before:content-center`}
+                    className={`bg-yellow ${testimonialStyles} before:content-school2 before:scale-75`}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once:true, amount: 0.5 }}
