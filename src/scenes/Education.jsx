@@ -50,7 +50,7 @@ const Education = () => {
 
 
                     <motion.div
-                    className={`bg-yellow ${testimonialStyles} before:content-school2 before:left-52`}
+                    className={`bg-yellow ${testimonialStyles} before:content-school2`}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once:true, amount: 0.5 }}
