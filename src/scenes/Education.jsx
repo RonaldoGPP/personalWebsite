@@ -50,7 +50,7 @@ const Education = () => {
 
 
                     <motion.div
-                    className={`bg-yellow ${testimonialStyles} before:content-school2`}
+                    className={`bg-yellow ${testimonialStyles} before:content-school2 before:content-center`}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once:true, amount: 0.5 }}
@@ -65,7 +65,7 @@ const Education = () => {
                             Bachelor's Degree - Computer Science
                         </p>
                         <p className="text-center text-sm">
-                            2020 - Present
+                            2020 - 2024
                         </p>
                     </motion.div>
                 </div>
