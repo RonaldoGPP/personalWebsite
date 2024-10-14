@@ -73,7 +73,7 @@ const MySkills = () => {
                     <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]"/>
                 </div>
                 <p className="mt-5">
-                    I have experience as an intern as a Full Stack Web Developer in PT. Mitra Pinasthika Mulia.
+                    I have experience as a Full Stack Web Developer intern in PT. Mitra Pinasthika Mulia.
                 </p>
             </motion.div>
 
