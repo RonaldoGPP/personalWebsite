@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm test -- --passWithNoTests
+
+    - name: Build
+      run: npm run build
+
+    - name: Config Git
+      run: |
+        git config --global user.email "ronaldo.prayogo@gmail.com"
+        git config --global user.name "Ronaldo Prayogo"
+
+    - name: Deploy to github pages
+      if: github.ref == 'refs/heads/main'
+      run: npm run deploy
+      env:
+        GH_PAT: ${{ secrets.GH_PAT }}
+        GITHUB_REPOSITORY: ${{ github.repository }}
