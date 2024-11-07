@@ -39,6 +39,5 @@ jobs:
       if: github.ref == 'refs/heads/main'
       run: npm run deploy
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GITHUB_ACTOR: ${{ github.actor }}
+        GH_PAT: ${{ secrets.GH_PAT }}
         GITHUB_REPOSITORY: ${{ github.repository }}
