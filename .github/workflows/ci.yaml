@@ -30,6 +30,11 @@ jobs:
     - name: Build
       run: npm run build
 
+    - name: Config Git
+      run: |
+        git config --global user.email "ronaldo.prayogo@gmail.com"
+        git config --global user.name "Ronaldo Prayogo"
+
     - name: Deploy to github pages
       if: github.ref == 'refs/heads/main'
       run: npm run deploy
